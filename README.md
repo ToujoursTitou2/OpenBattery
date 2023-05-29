@@ -17,7 +17,7 @@ doas/sudo make
 
 ```
 [titou@Arch /]$ cd /Battery
-[titou@Arch Battery]$ doas make <---Replace 'doas' with 'sudo' or any others permission command
+[titou@Arch Battery]$ doas make <---Replace 'doas' with 'sudo' or any others permission command.
 [titou@Arch battery]$ battery
 Battery percent : 49
 %
