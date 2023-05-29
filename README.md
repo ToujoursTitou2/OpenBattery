@@ -9,6 +9,4 @@ terminal-based battery percent display.
 
 𝐈𝐧𝐬𝐭𝐚𝐥𝐥𝐚𝐭𝐢𝐨𝐧
 
-```
-doas/sudo make
-```
+```doas/sudo make```
