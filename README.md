@@ -12,3 +12,14 @@ terminal-based battery percent display.
 ```
 doas/sudo make
 ```
+
+𝐄𝐱𝐚𝐦𝐩𝐥𝐞
+
+```
+[titou@Arch /]$ cd /Battery
+[titou@Arch Battery]$ doas make <---Replace 'doas' with 'sudo' or any others permission command
+[titou@Arch battery]$ battery
+Battery percent : 49
+%
+[titou@Arch battery]$
+```
