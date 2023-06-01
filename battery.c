@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include <signal.h>
 #include "battery.h"
 #include "inputscan.h"
 
 int main(){
+  signal(SIGNIT, handleSignal);
   char *input = NULL;
   input = malloc(sizeof(char));
   if(input == NULL){
@@ -87,4 +89,11 @@ void energy_now(){
   fgets(path, SIZE, file);
   printf("Battery energy now : %s^\n", path);
   fclose(file);
+}
+
+void handleSignal(int signal){
+  if(signal == SIGNIT){
+    printf("\nExiting...\n");
+    exit(EXIT_SUCCESS);
+  }
 }
