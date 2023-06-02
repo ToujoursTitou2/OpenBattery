@@ -14,7 +14,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("Battery v1.1\n");
+  printf("Battery v1.4\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
@@ -48,8 +48,8 @@ void capacity(){
     exit(EXIT_FAILURE);
   }
   fgets(path, SIZE, file);
-  fclose(file);
   printf("Battery capacity : %s%%\n", path);
+  fclose(file);
 }
 
 void status(){
@@ -74,7 +74,7 @@ void energy_full(){
     exit(EXIT_FAILURE);
   }
   fgets(path, SIZE, file);
-  printf("Battery full energy : %s\n", path);
+  printf("Battery full energy : %sµAh\n", path);
   fclose(file);
 }
 
@@ -87,7 +87,7 @@ void energy_now(){
     exit(EXIT_FAILURE);
   }
   fgets(path, SIZE, file);
-  printf("Battery energy now : %s^\n", path);
+  printf("Battery energy now : %sµAh\n", path);
   fclose(file);
 }
 
