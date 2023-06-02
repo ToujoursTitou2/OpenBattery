@@ -71,10 +71,10 @@ void energy_full(){
   file = fopen("/sys/class/power_supply/BAT1/energy_full", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
-    exit(EXIT_FAILURE);;
+    exit(EXIT_FAILURE);
   }
   fgets(path, SIZE, file);
-  printf("Battery full energy : %s\n", strerror(errno));
+  printf("Battery full energy : %s\n", path);
   fclose(file);
 }
 
