@@ -1,5 +1,5 @@
 # Battery
-terminal-based battery informations display.
+terminal-based battery monitor display.
 
 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐦𝐞𝐧𝐭𝐬
 ```
