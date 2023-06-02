@@ -7,7 +7,7 @@
 #include "inputscan.h"
 
 int main(){
-  signal(SIGNIT, handleSignal);
+  signal(SIGINT, handleSignal);
   char *input = NULL;
   input = malloc(sizeof(char));
   if(input == NULL){
@@ -36,6 +36,7 @@ int main(){
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
   }
+  free(input);//Toujours libérer la mémoire après un malloc
   return EXIT_SUCCESS;
 }
 
@@ -92,7 +93,7 @@ void energy_now(){
 }
 
 void handleSignal(int signal){
-  if(signal == SIGNIT){
+  if(signal == SIGINT){
     printf("\nExiting...\n");
     exit(EXIT_SUCCESS);
   }
