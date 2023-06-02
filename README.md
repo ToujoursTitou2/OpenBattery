@@ -1,6 +1,3 @@
-# Battery
-terminal-based battery monitor display.
-
 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐦𝐞𝐧𝐭𝐬
 ```
 - Unix/Linux system
