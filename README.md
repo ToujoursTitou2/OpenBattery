@@ -16,19 +16,19 @@ Help
 ```
 battery -h
 ```
-Capacity
+Current battery charge level in percentage
 ```
 battery -c
 ```
-Status
+Current state of the battery(charged, charging, discharging, etc)
 ```
 battery -s
 ```
-Energy full
+Total battery capacity in microampere-hours(µAh)
 ```
 battery -ef
 ```
-Energy now
+Current battery capacity in microampere-hours(µAh)
 ```
 battery -en
 ```
