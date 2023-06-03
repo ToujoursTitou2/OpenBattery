@@ -98,3 +98,16 @@ void handleSignal(int signal){
     exit(EXIT_SUCCESS);
   }
 }
+
+void technology(){
+  FILE *file = NULL;
+  char path[SIZE];
+  file = fopen("/sys/class/power_supply/BAT1/technology", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(path, SIZE, file);
+  printf("Battery technology : %s\n", path);
+  fclose(file);
+}
