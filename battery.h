@@ -7,6 +7,7 @@ void capacity();
 void status();
 void energy_full();
 void energy_now();
+void technology();
 void handleSignal(int signal);
 
 #endif
