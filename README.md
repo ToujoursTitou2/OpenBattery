@@ -32,3 +32,7 @@ Current battery capacity in microampere-hours(µAh)
 ```
 battery -en
 ```
+Type of technology used by the battery(ex : Li-ion, Li-pol, NiCd, etc...)
+```
+battery -t
+```
