@@ -9,3 +9,26 @@
 ```
 doas/sudo make
 ```
+
+𝐖𝐢𝐤𝐢
+
+Help
+```
+battery -h
+```
+Capacity
+```
+battery -c
+```
+Status
+```
+battery -s
+```
+Energy full
+```
+battery -ef
+```
+Energy now
+```
+battery -en
+```
