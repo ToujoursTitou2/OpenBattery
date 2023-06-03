@@ -32,11 +32,13 @@ int main(){
       printf("battery -ef : battery energy full\n");
       printf("battery -en : battery energy now\n");
       printf("battery -h : battery help\n");
+    }else if(strcmp(input, "battery -vn") == 0){
+      voltage_now();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
   }
-  free(input);//Toujours libérer la mémoire après un malloc
+  free(input);
   return EXIT_SUCCESS;
 }
 
@@ -109,5 +111,18 @@ void technology(){
   }
   fgets(path, SIZE, file);
   printf("Battery technology : %s\n", path);
+  fclose(file);
+}
+
+void voltage_now(){
+  FILE *file = NULL;
+  char path[SIZE];
+  file = fopen("/sys/class/power_supply/BAT1/voltage_now", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(path, SIZE, file);
+  printf("Battery voltage now : %s\n", path);
   fclose(file);
 }
