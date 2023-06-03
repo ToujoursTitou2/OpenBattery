@@ -12,7 +12,7 @@ doas/sudo make
 
 𝐖𝐢𝐤𝐢
 
-Help
+List of commands
 ```
 battery -h
 ```
