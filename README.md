@@ -1,5 +1,6 @@
 𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐦𝐞𝐧𝐭𝐬
 ```
+- GCC Compiler
 - Unix/Linux system
 - Root access to the system
 ```
