@@ -59,7 +59,7 @@ void capacity(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery capacity : %s%%\n", c);
+  printf("%s%%\n", c);
   fclose(file);
 }
 
@@ -72,7 +72,7 @@ void status(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery status : %s\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
@@ -85,7 +85,7 @@ void energy_full(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery full energy : %sµAh\n", c);
+  printf("%sµAh\n", c);
   fclose(file);
 }
 
@@ -98,7 +98,7 @@ void energy_now(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery energy now : %sµAh\n", c);
+  printf("%sµAh\n", c);
   fclose(file);
 }
 
@@ -118,7 +118,7 @@ void technology(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery technology : %s\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
@@ -131,7 +131,7 @@ void voltage_now(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery voltage now : %s\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
@@ -144,7 +144,7 @@ void type(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("Battery adapter type : %s\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
@@ -158,7 +158,7 @@ void online(){
   }
   fgets(c, SIZE, file);
   if(c != NULL){
-    printf("Battery dapter is currently connected : %s\n", c);
+    printf("%s\n", c);
   }else{
     printf("Error: invalid file content.\n");
     fclose(file);
