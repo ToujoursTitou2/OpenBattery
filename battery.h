@@ -9,6 +9,7 @@ void energy_full();
 void energy_now();
 void technology();
 void type();
+void online();
 void handleSignal(int signal);
 
 #endif
