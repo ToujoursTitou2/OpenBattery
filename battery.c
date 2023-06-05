@@ -150,17 +150,19 @@ void type(){
 
 void online(){
   FILE *file = NULL;
-  char c[SIZE];
+  int i;
   file = fopen("/sys/class/power_supply/AC/online", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
-  fgets(c, SIZE, file);
-  if(c != NULL){
-    printf("%s\n", c);
+  fscanf(file, "%d", &i);
+  if(i == 1){
+    printf("connected\n");
+  }else if(i == 0){
+    printf("disconnected\n");
   }else{
-    printf("Error: invalid file content.\n");
+    printf("Error: invalid file content\n");
     fclose(file);
     exit(EXIT_FAILURE);
   }
