@@ -14,7 +14,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("Battery v1.5\n");
+  printf("Battery v1.8\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
@@ -37,6 +37,8 @@ int main(){
       voltage_now();
     }else if(strcmp(input, "battery -ty") == 0){
       type();
+    }else if(strcmp(input, "battery -o") == 0){
+      online();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
@@ -141,4 +143,22 @@ void type(){
   fgets(c, SIZE, file);
   printf("Battery adapter type : %s\n", c);
   fclose(file);
+}
+
+void online(){
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen("/sys/class/power_supply/AC/online", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(c, SIZE, file);
+  if(c == 1){
+    printf("Battery dapter is currently connected : Yes\n", c);
+  }else if(c == 0){
+    printf("Battery dapter is currently connected : No\n", c);
+  }else{
+    printf("Error: invalid file content.\n");
+  }
 }
