@@ -32,6 +32,7 @@ int main(){
       printf("battery -ef : battery energy full\n");
       printf("battery -en : battery energy now\n");
       printf("battery -h : battery help\n");
+      printf("battery -ty : battery adapter type\n");
     }else if(strcmp(input, "battery -vn") == 0){
       voltage_now();
     }else if(strcmp(input, "battery -ty") == 0){
