@@ -157,10 +157,8 @@ void online(){
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  if(c == 1){
-    printf("Battery dapter is currently connected : Yes\n", c);
-  }else if(c == 0){
-    printf("Battery dapter is currently connected : No\n", c);
+  if(c != NULL){
+    printf("Battery dapter is currently connected : %s\n", c);
   }else{
     printf("Error: invalid file content.\n");
     fclose(file);
