@@ -41,11 +41,11 @@ Current battery voltage
 ```
 battery -vn
 ```
-Adapter type
+Battery adapter type
 ```
 battery -ty
 ```
-Adapter is currently connected or not
+Battery adapter is currently connected or not
 ```
 battery -o
 ```
