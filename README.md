@@ -41,7 +41,7 @@ Current battery voltage
 ```
 battery -vn
 ```
-adapter type
+Adapter type
 ```
 battery -ty
 ```
