@@ -163,5 +163,8 @@ void online(){
     printf("Battery dapter is currently connected : No\n", c);
   }else{
     printf("Error: invalid file content.\n");
+    fclose(file);
+    exit(EXIT_FAILURE);
   }
+  fclose(file);
 }
