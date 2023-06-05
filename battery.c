@@ -27,12 +27,15 @@ int main(){
     }else if(strcmp(input, "battery -en") == 0){
       energy_now();
     }else if(strcmp(input, "battery -h") == 0){
+      printf("battery -h : list of commands\n");
       printf("battery -c : battery capacity\n");
       printf("battery -s : battery status\n");
       printf("battery -ef : battery energy full\n");
       printf("battery -en : battery energy now\n");
-      printf("battery -h : battery help\n");
       printf("battery -ty : battery adapter type\n");
+      printf("battery -o : battery adapter is currently connected or not\n");
+    }else if(strcmp(input, "battery -t") == 0){
+      technology();
     }else if(strcmp(input, "battery -vn") == 0){
       voltage_now();
     }else if(strcmp(input, "battery -ty") == 0){
