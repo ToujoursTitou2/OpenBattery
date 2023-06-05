@@ -34,6 +34,8 @@ int main(){
       printf("battery -h : battery help\n");
     }else if(strcmp(input, "battery -vn") == 0){
       voltage_now();
+    }else if(strcmp(input, "battery -ty") == 0){
+      type();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
