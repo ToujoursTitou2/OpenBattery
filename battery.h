@@ -11,6 +11,7 @@ void technology();
 void voltage_now();
 void type();
 void online();
+void serial_number();
 void handleSignal(int signal);
 
 #endif
