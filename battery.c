@@ -14,7 +14,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("Battery v1.8\n");
+  printf("Battery v1.9\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
@@ -34,6 +34,7 @@ int main(){
       printf("battery -en : battery energy now\n");
       printf("battery -ty : battery adapter type\n");
       printf("battery -o : battery adapter is currently connected or not\n");
+      printf("battery -sn : battery serial number\n");
     }else if(strcmp(input, "battery -t") == 0){
       technology();
     }else if(strcmp(input, "battery -vn") == 0){
@@ -42,6 +43,8 @@ int main(){
       type();
     }else if(strcmp(input, "battery -o") == 0){
       online();
+    }else if(strcmp(input, "battery -sn") == 0){
+      serial_number();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
@@ -166,5 +169,18 @@ void online(){
     fclose(file);
     exit(EXIT_FAILURE);
   }
+  fclose(file);
+}
+
+void serial_number(){
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen("/sys/class/power_supply/BAT1/serial_number", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(c, SIZE, file);
+  printf("%s\n", c);
   fclose(file);
 }
