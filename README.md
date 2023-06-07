@@ -50,3 +50,7 @@ Battery adapter is currently connected or not
 ```
 battery -o
 ```
+Battery serial number
+```
+battery -sn
+```
