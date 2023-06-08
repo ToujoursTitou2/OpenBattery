@@ -153,13 +153,13 @@ void type(){
 
 void online(){
   FILE *file = NULL;
-  short i;
+  signed short i;
   file = fopen("/sys/class/power_supply/AC/online", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
-  fscanf(file, "%hd", &i);
+  fscanf(file, "%zu", &i);
   if(i == 1){
     printf("connected\n");
   }else if(i == 0){
