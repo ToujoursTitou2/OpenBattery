@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 void clearBuffer();
-char charScan(char *input, int size);
+char charScan(unsigned char *input, int size);
 int intScan();
 double doubleScan();
 #endif
