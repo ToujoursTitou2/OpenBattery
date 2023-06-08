@@ -9,7 +9,7 @@ void clearBuffer(){
   }
 }
 
-char charScan(char *input, int size){
+char charScan(unsigned char *input, int size){
   if(fgets(input, size, stdin) != NULL){
     if(input[strlen(input) - 1] == '\n'){
       input[strlen(input) - 1] = '\0'; 
