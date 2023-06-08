@@ -1,3 +1,7 @@
+/*
+Modified version of the InputScan library. If you wish to use it, you better use this
+version : https://github.com/ToujoursTitou2/InputScan
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
