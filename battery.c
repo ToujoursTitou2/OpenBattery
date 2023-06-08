@@ -1,3 +1,7 @@
+/*
+Start of the program & main functions
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
