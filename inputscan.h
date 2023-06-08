@@ -1,3 +1,7 @@
+/*
+Header file of inputscan.h but modified for the current project
+*/
+
 #ifndef INPUTSCAN_H
 #define INPUTSCAN_H
 #include <stdio.h>
