@@ -1,5 +1,5 @@
 /*
-Header file of inputscan.h but modified for the current project
+Header file of inputscan.c but modified for the current project
 */
 
 #ifndef INPUTSCAN_H
