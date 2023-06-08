@@ -8,7 +8,7 @@
 
 int main(){
   signal(SIGINT, handleSignal);
-  char *input = NULL;
+  unsigned char *input = NULL;
   input = malloc(sizeof(char));
   if(input == NULL){
     printf("Error: %s\n", strerror(errno));
