@@ -1,5 +1,5 @@
 /*
-Header file of the battery.c source file, which contains const & prototypes of functions
+Header file of the main.c source file, which contains const & prototypes of functions
 */
 #ifndef MAIN_H
 #define MAIN_H
