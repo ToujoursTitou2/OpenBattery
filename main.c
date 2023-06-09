@@ -7,6 +7,7 @@ Start of the program & main functions
 #include <string.h>
 #include <errno.h>
 #include <signal.h>
+#include <dirent.h>
 #include "main.h"
 #include "inputscan.h"
 
@@ -39,6 +40,7 @@ int main(){
       printf("battery -ty : battery adapter type\n");
       printf("battery -o : battery adapter is currently connected or not\n");
       printf("battery -sn : battery serial number\n");
+      printf("battery -bq : quantity of batteries present on the system\n");
     }else if(strcmp(input, "battery -t") == 0){
       technology();
     }else if(strcmp(input, "battery -vn") == 0){
@@ -49,6 +51,8 @@ int main(){
       online();
     }else if(strcmp(input, "battery -sn") == 0){
       serial_number();
+    }else if(strcmp(input, "battery -bq") == 0){
+      battery_quantity();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
@@ -187,4 +191,31 @@ void serial_number(){
   fgets(c, SIZE, file);
   printf("%s\n", c);
   fclose(file);
+}
+
+void battery_quantity(){
+  const char *folderPath = "/sys/class/power_supply";
+  unsigned short elementCount;
+  elementCount = countElementsInFolder(folderPath, "AC");
+  if(elementCount >= 0){
+    printf("%zu\n", elementCount);
+  }
+}
+
+unsigned short countElementsInFolder(const char *folderPath, const char *excludedName){
+  DIR *directory;
+  struct dirent *entry;
+  unsigned short count = 0;
+  directory = opendir(folderPath);
+  if(directory == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  while((entry = readdir(directory)) != NULL){
+    if(strcmp(entry->d_name ".") != 0 && strcmp(entry->d_name, "..") != 0 && strcmp(entry->d_name, excludedName) != 0){
+      count++;
+    }
+  }
+  closeddir(directory);
+  return count;
 }
