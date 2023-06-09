@@ -19,7 +19,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("Battery v1.9\n");
+  printf("Battery v1.11\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
