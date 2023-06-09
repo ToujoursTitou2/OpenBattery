@@ -33,10 +33,12 @@ int main(){
       energy_now();
     }else if(strcmp(input, "battery -h") == 0){
       printf("battery -h : list of commands\n");
-      printf("battery -c : battery capacity\n");
-      printf("battery -s : battery status\n");
-      printf("battery -ef : battery energy full\n");
-      printf("battery -en : battery energy now\n");
+      printf("battery -c : current battery charge level in percentage\n");
+      printf("battery -s : current state of the battery(charged, charging, discharging, etc...)\n");
+      printf("battery -ef : total battery capacity in microampere-hours(µAh)\n");
+      printf("battery -en : current battery capacity in microampere-hours(µAh)\n");
+      printf("battery -t : type of technology used by the battery(ex : Li-ion, Li-pol, NiCd, etc...");
+      printf("battery -vn : current battery voltage\n");
       printf("battery -ty : battery adapter type\n");
       printf("battery -o : battery adapter is currently connected or not\n");
       printf("battery -sn : battery serial number\n");
