@@ -15,6 +15,8 @@ void voltage_now();
 void type();
 void online();
 void serial_number();
+unsigned short countElementsInFolder(const char *folderPath, const char *excludedName);
+void battery_quantity();
 void handleSignal(int signal);
 
 #endif
