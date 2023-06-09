@@ -54,3 +54,7 @@ Battery serial number
 ```
 battery -sn
 ```
+Quantity of batteries present on the system
+```
+battery -bq
+```
