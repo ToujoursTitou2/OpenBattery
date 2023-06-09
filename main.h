@@ -1,8 +1,8 @@
 /*
 Header file of the battery.c source file, which contains const & prototypes of functions
 */
-#ifndef BATTERY_H
-#define BATTERY_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #define SIZE 15
 
