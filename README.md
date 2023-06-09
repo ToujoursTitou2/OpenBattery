@@ -7,8 +7,7 @@ The OpenBattery utility offers a user-friendly command-line interface, allowing 
 The project is open-source, allowing developers to contribute to its improvement and customization. It aims to provide a reliable and straightforward battery monitoring solution for Linux users, enhancing their overall experience and helping them make informed decisions about their battery usage.
 
 Overall, the "OpenBattery" GitHub repository serves as a valuable resource for Linux users who seek a lightweight, command-line battery monitoring tool, providing essential information about their device's battery health and performance.
-<div style="font-size: 20px;">
+
 [Requirements](https://github.com/ToujoursTitou2/OpenBattery/wiki/Installation)
 [Installation](https://github.com/ToujoursTitou2/OpenBattery/wiki/Installation)
 [Wiki](https://github.com/ToujoursTitou2/OpenBattery/wiki)
-</div>
