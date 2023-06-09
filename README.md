@@ -1,60 +1,12 @@
-𝐑𝐞𝐪𝐮𝐢𝐫𝐞𝐦𝐞𝐧𝐭𝐬
-```
-- GCC Compiler
-- Make
-- Unix-Like or GNU/Linux system
-- Root access to the system
-```
+The "OpenBattery" GitHub repository is a project that aims to provide a battery monitoring and information retrieval utility for Linux systems. It is a command-line tool written in C, designed to retrieve and display various battery-related information from the Linux kernel's sysfs interface.
 
-𝐈𝐧𝐬𝐭𝐚𝐥𝐥𝐚𝐭𝐢𝐨𝐧
+The repository contains the source code for the OpenBattery utility, along with a Makefile for easy compilation and installation. The code is structured into several modules, each responsible for retrieving specific battery information such as capacity, status, energy levels, technology, voltage, and more. It utilizes file I/O operations to read the necessary information from the corresponding sysfs files.
 
-```
-make
-```
+The OpenBattery utility offers a user-friendly command-line interface, allowing users to query specific battery information by executing various commands. It provides valuable insights into the current battery state, capacity, energy levels, and technology, enabling users to monitor and manage their battery usage efficiently.
 
-𝐖𝐢𝐤𝐢
+The project is open-source, allowing developers to contribute to its improvement and customization. It aims to provide a reliable and straightforward battery monitoring solution for Linux users, enhancing their overall experience and helping them make informed decisions about their battery usage.
 
-List of commands
-```
-battery -h
-```
-Current battery charge level in percentage
-```
-battery -c
-```
-Current state of the battery(charged, charging, discharging, etc)
-```
-battery -s
-```
-Total battery capacity in microampere-hours(µAh)
-```
-battery -ef
-```
-Current battery capacity in microampere-hours(µAh)
-```
-battery -en
-```
-Type of technology used by the battery(ex : Li-ion, Li-pol, NiCd, etc...)
-```
-battery -t
-```
-Current battery voltage
-```
-battery -vn
-```
-Battery adapter type
-```
-battery -ty
-```
-Battery adapter is currently connected or not
-```
-battery -o
-```
-Battery serial number
-```
-battery -sn
-```
-Quantity of batteries present on the system
-```
-battery -bq
-```
+Overall, the "OpenBattery" GitHub repository serves as a valuable resource for Linux users who seek a lightweight, command-line battery monitoring tool, providing essential information about their device's battery health and performance.
+[Requirements](https://github.com/ToujoursTitou2/OpenBattery/wiki/Installation)
+[Installation](https://github.com/ToujoursTitou2/OpenBattery/wiki/Installation)
+[Wiki](https://github.com/ToujoursTitou2/OpenBattery/wiki)
