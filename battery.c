@@ -7,7 +7,7 @@ Start of the program & main functions
 #include <string.h>
 #include <errno.h>
 #include <signal.h>
-#include "battery.h"
+#include "main.h"
 #include "inputscan.h"
 
 int main(){
