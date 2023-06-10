@@ -165,7 +165,7 @@ void online(){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
-  fscanf(file, "%zu", &i);
+  fscanf(file, "%hu", &i);
   if(i == 1){
     printf("connected\n");
   }else if(i == 0){
@@ -197,7 +197,7 @@ void battery_quantity(){
 
   elementCount = countElementsInFolder(folderPath, "AC");
   if(elementCount >= 0){
-    printf("%zu\n", elementCount);
+    printf("%hu\n", elementCount);
   }
 }
 
