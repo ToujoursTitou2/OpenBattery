@@ -15,7 +15,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("OpenBattery v1.11\n");
+  printf("OpenBattery v1.12\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
