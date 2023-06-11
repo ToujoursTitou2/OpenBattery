@@ -9,13 +9,13 @@
 
 int main(){
   signal(SIGINT, handleSignal);
-  unsigned char *input = NULL;
-  input = malloc(sizeof(unsigned char));
+  char *input = NULL;
+  input = malloc(sizeof(char));
   if(input == NULL){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("OpenBattery v1.13\n");
+  printf("OpenBattery v2.0\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
@@ -61,53 +61,53 @@ int main(){
 
 void capacity(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/capacity", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhu%%\n", c);
+  printf("%s%%\n", c);
   fclose(file);
 }
 
 void status(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/status", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhu\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
 void energy_full(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/energy_full", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhuµAh\n", c);
+  printf("%sµAh\n", c);
   fclose(file);
 }
 
 void energy_now(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/energy_now", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhuµAh\n", c);
+  printf("%sµAh\n", c);
   fclose(file);
 }
 
@@ -120,40 +120,40 @@ void handleSignal(int signal){
 
 void technology(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/technology", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhu\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
 void voltage_now(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/voltage_now", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhumV\n", c);
+  printf("%smV\n", c);
   fclose(file);
 }
 
 void type(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/AC/type", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhu\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
@@ -180,21 +180,20 @@ void online(){
 
 void serial_number(){
   FILE *file = NULL;
-  unsigned char c[SIZE];
+  char c[SIZE];
   file = fopen("/sys/class/power_supply/BAT1/serial_number", "r");
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
-  printf("%hhu\n", c);
+  printf("%s\n", c);
   fclose(file);
 }
 
 void battery_quantity(){
   const char *folderPath = "/sys/class/power_supply";
   unsigned short elementCount;
-
   elementCount = countElementsInFolder(folderPath, "AC");
   if(elementCount >= 0){
     printf("%hu\n", elementCount);
@@ -217,4 +216,17 @@ unsigned short countElementsInFolder(const char *folderPath, const char *exclude
   }
   closedir(directory);
   return count;
+}
+
+void cycle_count(){
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen("/sys/class/power_supply/BAT1/cycle_count", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(c, SIZE, file);
+  printf("%s\n", c);
+  fclose(file);
 }
