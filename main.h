@@ -14,6 +14,7 @@ void online();
 void serial_number();
 unsigned short countElementsInFolder(const char *folderPath, const char *excludedName);
 void battery_quantity();
+void cycle_count();
 void handleSignal(int signal);
 
 #endif
