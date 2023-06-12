@@ -15,7 +15,7 @@ int main(){
     printf("Error: %s\n", strerror(errno));
     return EXIT_FAILURE;
   }
-  printf("OpenBattery v2.0\n");
+  printf("OpenBattery v2.1\n");
   while(1){
     printf(">> ");
     charScan(input, SIZE);
@@ -40,6 +40,7 @@ int main(){
       printf("battery -sn : battery serial number\n");
       printf("battery -bq : quantity of batteries present on the system\n");
       printf("battery -cc : number of battery charge and discharge cycles\n");
+      printf("battery -m : name of battery manufacturer\n");
     }else if(strcmp(input, "battery -t") == 0){
       technology();
     }else if(strcmp(input, "battery -vn") == 0){
@@ -54,6 +55,8 @@ int main(){
       battery_quantity();
     }else if(strcmp(input, "battery -cc") == 0){
       cycle_count();
+    }else if(strcmp(input, "battery -m") == 0){
+      manufacturer();
     }else{
       printf("Unrecognized input: enter 'battery -h' for more informations.\n");
     }
@@ -232,5 +235,18 @@ void cycle_count(){
   }
   fscanf(file, "%hu", &i);
   printf("%hu\n", i);
+  fclose(file);
+}
+
+void manufacturer(){
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen("/sys/class/power_supply/BAT1/manufacturer", "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
+  }
+  fgets(c, SIZE, file);
+  printf("%s\n", c);
   fclose(file);
 }
