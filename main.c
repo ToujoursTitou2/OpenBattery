@@ -62,7 +62,9 @@ int main(){
       }else if(strcmp(input, "battery -cc") == 0){
 	cycle_count(folderName);
       }else if(strcmp(input, "battery -m") == 0){
-      manufacturer(folderName);
+	manufacturer(folderName);
+      }else if(strcmp(input, "battery -mn") == 0){
+	model_name(folderName);
       }else{
 	printf("Unrecognized input: enter 'battery -h' for more informations.\n");
       }
@@ -87,6 +89,7 @@ void help(){
   printf("battery -bq : quantity of batteries present on the system\n");
   printf("battery -cc : number of battery charge and discharge cycles\n");
   printf("battery -m : name of battery manufacturer\n");
+  printf("battery -mn : battery model name\n");
 }
 
 void capacity(char *folderName){
@@ -305,6 +308,23 @@ void manufacturer(char *folderName){
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
+  }
+  fgets(c, SIZE, file);
+  printf("%s\n", c);
+  fclose(file);
+}
+
+void model_name(char *folderName){
+  const char *directory = "/sys/class/power_supply";
+  const char *fileName = "model_name";
+  char filePath[PATH_SIZE];
+  snprintf(filePath, sizeof(filePath), "%s/%s/%s", directory, folderName, fileName);
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen(filePath, "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE); 
   }
   fgets(c, SIZE, file);
   printf("%s\n", c);
