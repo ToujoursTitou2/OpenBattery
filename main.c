@@ -137,6 +137,12 @@ void energy_full(char *folderName){
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE);
+    const char *fileName = "energy_full_design";
+    file = fopen(filePath, "r");
+    if(file == NULL){
+      printf("Error: %s\n", strerror(errno));
+      exit(EXIT_FAILURE);
+    }
   }
   fscanf(file,"%d", &i);
   printf("%dµAh\n", i);
