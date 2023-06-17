@@ -33,7 +33,7 @@ int main(){
       printf("Error: %s\n", strerror(errno));
       exit(EXIT_FAILURE);
     }
-    printf("OpenBattery v2.3\n");
+    printf("OpenBattery v2.4\n");
     while(1){
       printf(">> ");
       charScan(input, SIZE);
@@ -65,8 +65,10 @@ int main(){
 	manufacturer(folderName);
       }else if(strcmp(input, "battery -mn") == 0){
 	model_name(folderName);
+      }else if(strcmp(input, "battery -efd") == 0){
+	energy_full_design(folderName);
       }else{
-	printf("Unrecognized input: enter 'battery -h' for more informations.\n");
+      	printf("Unrecognized input: entery 'battery -h' for more informations.\n");
       }
     }
     closedir(dir);
@@ -90,6 +92,7 @@ void help(){
   printf("battery -cc : number of battery charge and discharge cycles\n");
   printf("battery -m : name of battery manufacturer\n");
   printf("battery -mn : battery model name\n");
+  printf("battery -efd : total battery design energy\n");
 }
 
 void capacity(char *folderName){
@@ -325,6 +328,23 @@ void model_name(char *folderName){
   if(file == NULL){
     printf("Error: %s\n", strerror(errno));
     exit(EXIT_FAILURE); 
+  }
+  fgets(c, SIZE, file);
+  printf("%s\n", c);
+  fclose(file);
+}
+
+void energy_full_design(char *folderName){
+  const char *directory = "/sys/class/power_supply";
+  const char *fileName = "energy_full_design";
+  char filePath[SIZE];
+  snprintf(filePath, sizeof(filePath), "%s/%s/%s", directory, folderName, fileName);
+  FILE *file = NULL;
+  char c[SIZE];
+  file = fopen(filePath, "r");
+  if(file == NULL){
+    printf("Error: %s\n", strerror(errno));
+    exit(EXIT_FAILURE);
   }
   fgets(c, SIZE, file);
   printf("%s\n", c);
