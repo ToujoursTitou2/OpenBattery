@@ -81,8 +81,8 @@ void help(){
   printf("battery -h : list of commands\n");
   printf("battery -c : current battery charge level in percentage\n");
   printf("battery -s : current state of the battery(charged, charging, discharging, etc...)\n");
-  printf("battery -ef : total battery capacity in microampere-hours(µAh)\n");
-  printf("battery -en : current battery capacity in microampere-hours(µAh)\n");
+  printf("battery -ef : total battery capacity\n");
+  printf("battery -en : current battery capacity\n");
   printf("battery -t : type of technology used by the battery(ex : Li-ion, Li-pol, NiCd, etc...)\n");
   printf("battery -vn : current battery voltage\n");
   printf("battery -ty : battery adapter type\n");
@@ -92,7 +92,7 @@ void help(){
   printf("battery -cc : number of battery charge and discharge cycles\n");
   printf("battery -m : name of battery manufacturer\n");
   printf("battery -mn : battery model name\n");
-  printf("battery -efd : total battery design energy\n");
+  printf("battery -efd : total battery design capacity\n");
 }
 
 void capacity(char *folderName){
