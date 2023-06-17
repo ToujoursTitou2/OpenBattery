@@ -33,7 +33,7 @@ int main(){
       printf("Error: %s\n", strerror(errno));
       exit(EXIT_FAILURE);
     }
-    printf("OpenBattery v2.4\n");
+    printf("OpenBattery v2.3\n");
     while(1){
       printf(">> ");
       charScan(input, SIZE);
