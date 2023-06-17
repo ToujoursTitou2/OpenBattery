@@ -19,6 +19,7 @@ void battery_quantity();
 void cycle_count(char *folderName);
 void manufacturer(char *folderName);
 void model_name(char *folderName);
+void energy_full_design(char *folderName);
 void handleSignal(int signal);
 
 #endif
