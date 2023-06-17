@@ -68,7 +68,7 @@ int main(){
       }else if(strcmp(input, "battery -efd") == 0){
 	energy_full_design(folderName);
       }else{
-	printf("Unrecognized input: enter 'battery -' for more informations.\n");
+	printf("Unrecognized input: enter 'battery -h' for more informations.\n");
       }
     }
     closedir(dir);
