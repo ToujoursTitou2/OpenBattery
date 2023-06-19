@@ -1,3 +1,5 @@
+![Logo](logo.png)
+
 The "OpenBattery" GitHub repository is a project that aims to provide a battery monitoring and information retrieval utility for Linux systems. It is a command-line tool written in C, designed to retrieve and display various battery-related information from the Linux kernel's sysfs interface.
 
 The repository contains the source code for the OpenBattery utility, along with a Makefile for easy compilation and installation. The code is structured into several modules, each responsible for retrieving specific battery information such as capacity, status, energy levels, technology, voltage, and more. It utilizes file I/O operations to read the necessary information from the corresponding sysfs files.
