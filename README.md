@@ -1,4 +1,4 @@
-`![Logo](logo.png)`
+![Logo](logo.png)`
 
 The "OpenBattery" GitHub repository is a project that aims to provide a battery monitoring and information retrieval utility for Linux systems. It is a command-line tool written in C, designed to retrieve and display various battery-related information from the Linux kernel's sysfs interface.
 
