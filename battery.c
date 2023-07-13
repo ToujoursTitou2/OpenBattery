@@ -73,6 +73,7 @@ int main(int argc, char *argv[]){
   }else{
     printf("Usage: battery [arg]\n");
   }
+  free(folderName);
   closedir(dir);
   return EXIT_SUCCESS;
 }
