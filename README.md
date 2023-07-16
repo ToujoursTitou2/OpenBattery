@@ -6,4 +6,6 @@ At first i was looking for a terminal-based battery monitor for my Arch Linux sy
 
 At the beginning the program only displayed remaining battery percentage, but at the time i write this, he now can detect amount of batterie present on the system and propose a total of 16 commands all can be combined to access to the required amount of informations.
 
-[Wiki](https://github.com/ToujoursTitou2/OpenBattery/wiki)
+<p align="center">
+  [Wiki](https://github.com/ToujoursTitou2/OpenBattery/wiki)
+</p>
