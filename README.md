@@ -8,6 +8,6 @@ At the beginning the program only displayed remaining battery percentage, but at
 
 <p align="center">
   <a href="https://github.com/ToujoursTitou2/OpenBattery/wiki">
-    <span style="font-family: Arial, sans-serif; font-size: 16px;">Wiki</span>
+    <span style="font-family: freemono, sans-serif; font-size: 16px;">Wiki</span>
   </a>
 </p>
