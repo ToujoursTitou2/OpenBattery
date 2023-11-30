@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#define VERSION "3.2"
+#define VERSION "3.3"
 
 void help();
 void version();

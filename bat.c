@@ -60,7 +60,27 @@ void energy_full(char **bat, unsigned short numStrings){
       }
     }
     fscanf(file,"%d", &c);
-    printf("Battery %s: %d\n", bat[i], c);
+    const char *dir = "/sys/class/power_supply";
+    const char *fn = "energy_full_design";
+    char fp[PATH_MAX];
+    snprintf(fp, sizeof(fp), "%s/%s/%s", dir, bat[i], fn);
+    FILE *f = NULL;
+    char e[SIZE];
+    f = fopen(fp, "r");
+    if(f == NULL){
+      const char *fn = "charge_full_design";
+      snprintf(fp, sizeof(fp), "%s/%s/%s", dir, bat[i], fn);
+      f = fopen(filePath, "r");
+      if(f == NULL){
+	continue;
+      }
+    }
+    fgets(e, SIZE, f);
+    int a = strtol(e, NULL, 10);
+    unsigned int result = c * 100;
+    result = result / a;
+    printf("Battery %s: %d (%hu%%)\n", bat[i], c, result);
+    fclose(f);
     fclose(file);
   }
 }
