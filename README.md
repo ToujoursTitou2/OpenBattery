@@ -12,7 +12,7 @@ At the beginning the program only displayed remaining battery percentage, but at
 
 
 [![Button Example]][Link]<!-------------------------------------------------------------------------->
-[Link]: # 'Link with example title.'
+[Link]: # 'https://github.com/ToujoursTitou2/OpenBattery/wiki'
 <!---------------------------------[ Buttons]--------------------------------->
 [Button Example]: https://img.shields.io/badge/Documentation-Wiki-black
 
