@@ -9,5 +9,6 @@ At the beginning the program only displayed remaining battery percentage, but at
 <p align="center">
   <a href="https://github.com/ToujoursTitou2/OpenBattery/wiki">Wiki</a>
 </p>
-
-[![Button Example]][Link]
+<div align = center>
+  [Wifi]: https://github.com/ToujoursTitou2/OpenBattery/wiki
+</div>
