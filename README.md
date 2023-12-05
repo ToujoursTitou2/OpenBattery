@@ -17,7 +17,7 @@ At the beginning the program only displayed remaining battery percentage, but at
 <!----------------------------------------------------------------------------->
 [Link]: # 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
-[Button Example]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
+[Button Example]: https://badgen.net/#static/Documentation/%20Wiki/black
 
 
 
