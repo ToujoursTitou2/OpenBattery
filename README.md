@@ -11,7 +11,7 @@ At the beginning the program only displayed remaining battery percentage, but at
 </p>
 
 
-<div align = center>
+<div align="center">
 [![Button Example]][Link]
 </div>
 <!----------------------------------------------------------------------------->
