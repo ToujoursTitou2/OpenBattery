@@ -11,14 +11,14 @@ At the beginning the program only displayed remaining battery percentage, but at
 </p>
 
 
-
+<div align="center">
 [![Button Example]][Link]
+</div>
 <!----------------------------------------------------------------------------->
 [Link]: # 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
-<div align="center">
 [Button Example]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
-</div>
+
 
 
 
