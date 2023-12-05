@@ -10,9 +10,9 @@ At the beginning the program only displayed remaining battery percentage, but at
   <a href="https://github.com/ToujoursTitou2/OpenBattery/wiki">Wiki</a>
 </p>
 
-<div align="center">
-[![Button Shield]][Shield]
-</div>
-[![Button Shield]][Shield]
-[Button Shield]: https://badgen.net/#static/Documentation/%20Wiki/black
+[![Button Example]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: # 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Example]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
 
