@@ -10,7 +10,7 @@ At the beginning the program only displayed remaining battery percentage, but at
   <a href="https://github.com/ToujoursTitou2/OpenBattery/wiki">Wiki</a>
 </p>
 
-<div align="center">
+<div align = center>
 [![Button Example]][Link]
 </div>  <!----------------------------------------------------------------------------->
 [Link]: # 'Link with example title.'
