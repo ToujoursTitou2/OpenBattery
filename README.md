@@ -1,3 +1,5 @@
+https://img.shields.io/badge/license-GPLv3-red
+
 ![Logo](Bannière.png)
 <p display="flex">
 I started writing OpenBattery source code at the beginning of june 2023.
